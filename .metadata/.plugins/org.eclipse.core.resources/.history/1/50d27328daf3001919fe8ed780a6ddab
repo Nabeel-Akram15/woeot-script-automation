@@ -1,0 +1,104 @@
+package tests;
+
+//import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Scanner;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.remote.MobileCapabilityType;
+
+public class BaseClass {
+	
+	AppiumDriver<MobileElement> driver;
+	
+	@BeforeTest
+	public void setup() {
+		
+		System.out.println("Enter the number of devices You want to test");
+	 {
+		try {
+		DesiredCapabilities cap=new DesiredCapabilities();
+		//System.out.println("Please Enter under testing Device Version");
+		//Scanner version = new Scanner(System.in);
+		cap.setCapability(MobileCapabilityType.PLATFORM_VERSION,"6.0.1");
+		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+        cap.setCapability(MobileCapabilityType.UDID, "06a223102354fe36");
+        cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 5");
+        
+        //This is App related information
+        //cap.setCapability(MobileCapabilityType.APP,"/Internal storage/Download/Weoto-1-(1.0).apk");
+        cap.setCapability("appPackage", "com.weoto");
+        cap.setCapability("appActivity",".activities.SplashActivity");
+        
+        URL url=new URL(" http://127.0.0.1:4725/wd/hub");
+        driver= new AppiumDriver<MobileElement>(url,cap);
+        
+		System.out.println("Applcation started...");
+		Thread.sleep(2000);
+
+	}catch (Exception exp)
+		{
+		System.out.println("Exception cause is"  + exp.getCause());
+		System.out.println("Exception message  is"  + exp.getMessage());
+		exp.getStackTrace();
+		}
+		}
+	@Test
+	public void PositiveVlaueSignUp() throws Exception {
+		Thread.sleep(5000);
+		//Its Allowing Permission for different things
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        // Allowing  FOr SignUp
+        
+		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+		Thread.sleep(2000);
+		// Entering Personal Informations
+		
+		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("NAbeel");
+		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("nabeelakram15@yahoo.com");
+		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		Thread.sleep(20000);
+		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("Password123");
+		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		System.out.println("You have 2 Minutes please verify your email");
+		Thread.sleep(50000);
+		driver.findElement(By.id("continueBtnTextView")).click();
+		Thread.sleep(5000);
+		System.out.println("Please Enter Phone Number");
+		 Thread.sleep(500);
+		 driver.findElement(By.id("txtPhoneNumber")).sendKeys("3234425219");
+		 driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		 System.out.println("Test for signUp is complete succuesfully");
+		 
+	}
+	@AfterTest
+	//
+	public void Login()
+	{
+		System.out.println("Ist for the Second test case");
+	}
+	
+	@AfterTest
+	public void teardown() {
+	
+		driver.quit();
+	}
+
+}

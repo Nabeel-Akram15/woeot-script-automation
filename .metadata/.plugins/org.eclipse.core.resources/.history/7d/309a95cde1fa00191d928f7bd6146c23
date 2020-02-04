@@ -1,0 +1,49 @@
+package tests;
+
+import java.net.URL;
+
+//import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.remote.MobileCapabilityType;
+
+public class Tests  {
+	static AppiumDriver<MobileElement> driver;
+public static void setup() {
+		
+
+		try {
+		DesiredCapabilities cap=new DesiredCapabilities();
+		cap.setCapability(MobileCapabilityType.PLATFORM_VERSION,"8.0.0");
+		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+		
+        cap.setCapability(MobileCapabilityType.UDID , "b274ce91");
+        cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S7 edge");
+        
+        //This is App related information
+        //cap.setCapability(MobileCapabilityType.APP,"/Internal storage/Download/Weoto-1-(1.0).apk");
+        cap.setCapability("appPackage", "com.weoto");
+        cap.setCapability("appActivity",".activities.SplashActivity");
+        
+        URL url=new URL(" http://127.0.0.1:4723/wd/hub");
+        driver= new AppiumDriver<MobileElement>(url,cap);
+        
+		System.out.println("Application started...");
+		Thread.sleep(2000);
+
+	}catch (Exception exp)
+		{
+		System.out.println("Exception cause is"  + exp.getCause());
+		System.out.println("Exception message  is"  + exp.getMessage());
+		exp.getStackTrace();
+		}
+		
+	}	   
+}

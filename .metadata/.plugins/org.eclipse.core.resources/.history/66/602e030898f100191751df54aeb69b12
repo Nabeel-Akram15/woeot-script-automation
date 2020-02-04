@@ -1,0 +1,114 @@
+package tests;
+
+//import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.remote.MobileCapabilityType;
+
+public class BaseClass {
+	
+	AppiumDriver<MobileElement> driver;
+	
+	@BeforeTest
+	public void setup() {
+		
+		try {
+		DesiredCapabilities cap=new DesiredCapabilities();
+		cap.setCapability(MobileCapabilityType.PLATFORM_VERSION,"8.0.0");
+		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+        cap.setCapability(MobileCapabilityType.UDID, "b274ce91");
+        cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S7 edge");
+        
+        //This is App related information
+        //cap.setCapability(MobileCapabilityType.APP,"/Internal storage/Download/Weoto-1-(1.0).apk");
+        cap.setCapability("appPackage", "com.weoto");
+        cap.setCapability("appActivity",".activities.SplashActivity");
+        
+        URL url=new URL(" http://127.0.0.1:4725/wd/hub");
+        driver= new AppiumDriver<MobileElement>(url,cap);
+        
+		System.out.println("Applcation started...");
+		Thread.sleep(2000);
+
+	}catch (Exception exp)
+		{
+		System.out.println("Exception cause is"  + exp.getCause());
+		System.out.println("Exception message  is"  + exp.getMessage());
+		exp.getStackTrace();
+		}
+		}
+	@Test
+	public void SignUp_Positive() throws Exception {
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("NAbeel");
+		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("nabeelakram15@yahoo.com");
+		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("Password123");
+		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		Thread.sleep(5000);
+		System.out.println("You have 2 Minutes please verify your email");
+		 driver.findElement(By.id("//*[@resource-id='com.weoto:id/continueBtn']"));
+		 
+		 System.out.println("Please Enter Phone Number");
+		 driver.findElement(By.id("//*[@resource-id='com.weoto:id/txtPhoneNumber']")).sendKeys("3234425219");
+		 driver.findElement(By.id("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		 
+		
+		
+	}
+	
+	
+	public void SignUp() throws InterruptedException {
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+		
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Sign up']")));
+        driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+        
+        new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Continue']")));
+        driver.findElement(By.xpath("//*[@text='Continue']")).sendKeys("Bilal");
+        new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Continue']")));
+        driver.findElement(By.xpath("//*[@text='Continue']")).sendKeys("nabeelakram15@yahoo.com");
+        
+        new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Continue']")));
+        driver.findElement(By.xpath("//*[@text='Continue']")).sendKeys("Hell123");
+        new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Continue']")));
+        driver.findElement(By.xpath("//*[@text='Continue']")).sendKeys("3234425219");
+        new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Continue']")));
+        driver.findElement(By.xpath("//*[@text='Continue']")).sendKeys("435627");
+        new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Close']")));
+        driver.findElement(By.xpath("//*[@text='Close']")).click();
+		
+	}
+	
+	@AfterTest
+	public void teardown() {
+		
+	}
+
+}

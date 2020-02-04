@@ -1,0 +1,455 @@
+package tests;
+
+import java.net.URL;
+
+//import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.remote.MobileCapabilityType;
+
+
+public class BaseClass {
+	
+	static AppiumDriver<MobileElement> driver;
+	
+	// This Method is used for configuration with device 
+	
+	
+	     @BeforeClass
+	     public void information()
+	     {
+	    	 System.out.println("Before Performating every function application will be started again"
+	    	 		+ " You can either check with Single Device that is connected or "
+	    	 		+ "or you can check with multiple device for that comment"
+	    	 		+ "code that is written inside configuration method");
+	     }
+	     
+	  // This Method is used for configuration with device 
+	@BeforeMethod 
+	public void Verification() {
+		
+		try {
+			DesiredCapabilities cap=new DesiredCapabilities();
+			cap.setCapability(MobileCapabilityType.PLATFORM_VERSION,"8.0.0");
+			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+			
+	        cap.setCapability(MobileCapabilityType.UDID , "b274ce91");
+	        cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S7 edge");
+	        
+	        //This is App related information
+	        //cap.setCapability(MobileCapabilityType.APP,"/Internal storage/Download/Weoto-1-(1.0).apk");
+	        cap.setCapability("appPackage", "com.weoto");
+	        cap.setCapability("appActivity",".activities.SplashActivity");
+	        
+	        URL url=new URL(" http://127.0.0.1:4723/wd/hub");
+	        driver= new AppiumDriver<MobileElement>(url,cap);
+	        
+			System.out.println("Application started...");
+			Thread.sleep(2000);
+
+		}catch (Exception exp)
+			{
+			System.out.println("Exception cause is"  + exp.getCause());
+			System.out.println("Exception message  is"  + exp.getMessage());
+			exp.getStackTrace();
+			}
+			
+		}	   
+	
+	    // Positive Value Testing For SignUP	
+	@Test
+	public void PositiveVlaueSignUp() throws Exception {
+		Thread.sleep(5000);
+		//Its Allowing Permission for different things
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+      driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+      driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+      driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+      driver.findElement(By.xpath("//*[@text='ALLOW' ]")).click();
+      // Allowing  FOr SignUp
+      
+		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+		Thread.sleep(2000);
+		// Entering Information for Sign up
+		
+		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("Nabeel");
+		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("nabeelakram15@yahoo.com");
+		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		Thread.sleep(20000);
+		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("Password123");
+		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		System.out.println("You have 2 Minutes please verify your email");
+		Thread.sleep(50000);
+		driver.findElement(By.id("continueBtnTextView")).click();
+		Thread.sleep(5000);
+	     System.out.println("Please Enter Phone Number");
+		 Thread.sleep(500);
+		 driver.findElement(By.id("txtPhoneNumber")).sendKeys("3234425219");
+		 driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+		 System.out.println("Test for signUp is complete succuesfully");
+		 driver.close();
+	}
+	
+	
+	
+	    // Blank or space Full Name field Check
+	@Test
+	public void BlackFUllName() throws Exception
+	{
+		Thread.sleep(5000);
+		//Its Allowing Permission for different things
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW' ]")).click();
+   // Allowing  FOr SignUp
+      
+   		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+   		Thread.sleep(2000);
+   		// Entering Information for Sign up
+   		
+   		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(2000);
+   		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(20000);
+   		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		System.out.println("You have 2 Minutes please verify your email");
+   		Thread.sleep(50000);
+   		driver.findElement(By.id("continueBtnTextView")).click();
+   		Thread.sleep(5000);
+   	     System.out.println("Please Enter Phone Number");
+   		 Thread.sleep(500);
+   		 driver.findElement(By.id("txtPhoneNumber")).sendKeys("");
+   		 driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		 System.out.println("Test for signUp is complete succuesfully");
+   		 
+	
+	}
+	
+	   // Full Name check with define exceeding Length
+	public void RangeExceedeFullName() throws Exception
+	{
+		Thread.sleep(5000);
+		//Its Allowing Permission for different things
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW' ]")).click();
+   // Allowing  FOr SignUp
+      
+   		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+   		Thread.sleep(2000);
+   		// Entering Information for Sign up
+   		
+   		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(2000);
+   		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(20000);
+   		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		System.out.println("You have 2 Minutes please verify your email");
+   		Thread.sleep(50000);
+   		driver.findElement(By.id("continueBtnTextView")).click();
+   		Thread.sleep(5000);
+   	     System.out.println("Please Enter Phone Number");
+   		 Thread.sleep(500);
+   		 driver.findElement(By.id("txtPhoneNumber")).sendKeys("");
+   		 driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		 System.out.println("Test for signUp is complete succuesfully");
+   		 
+	
+	}
+        
+	       //InValid Email Address 
+	public void NegativeSignUp() throws Exception
+	{
+		Thread.sleep(5000);
+		//Its Allowing Permission for different things
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW' ]")).click();
+   // Allowing  FOr SignUp
+      
+   		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+   		Thread.sleep(2000);
+   		// Entering Information for Sign up
+   		
+   		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(2000);
+   		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(20000);
+   		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		System.out.println("You have 2 Minutes please verify your email");
+   		Thread.sleep(50000);
+   		driver.findElement(By.id("continueBtnTextView")).click();
+   		Thread.sleep(5000);
+   	     System.out.println("Please Enter Phone Number");
+   		 Thread.sleep(500);
+   		 driver.findElement(By.id("txtPhoneNumber")).sendKeys("");
+   		 driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		 System.out.println("Test for signUp is complete succuesfully");
+   		 
+	
+	}
+	
+	     //	Password Incorrect Check
+	public void IncorrectPassword() throws Exception
+	{
+		Thread.sleep(5000);
+		//Its Allowing Permission for different things
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW' ]")).click();
+   // Allowing  FOr SignUp
+      
+   		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+   		Thread.sleep(2000);
+   		// Entering Information for Sign up
+   		
+   		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(2000);
+   		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(20000);
+   		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		System.out.println("You have 2 Minutes please verify your email");
+   		Thread.sleep(50000);
+   		driver.findElement(By.id("continueBtnTextView")).click();
+   		Thread.sleep(5000);
+   	     System.out.println("Please Enter Phone Number");
+   		 Thread.sleep(500);
+   		 driver.findElement(By.id("txtPhoneNumber")).sendKeys("");
+   		 driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		 System.out.println("Test for signUp is complete succuesfully");
+   		 
+	
+	}
+	     //Password Length Check While SignUP 
+	public void NegativeSignUp() throws Exception
+	{
+		Thread.sleep(5000);
+		//Its Allowing Permission for different things
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW' ]")).click();
+   // Allowing  FOr SignUp
+      
+   		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+   		Thread.sleep(2000);
+   		// Entering Information for Sign up
+   		
+   		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(2000);
+   		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(20000);
+   		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		System.out.println("You have 2 Minutes please verify your email");
+   		Thread.sleep(50000);
+   		driver.findElement(By.id("continueBtnTextView")).click();
+   		Thread.sleep(5000);
+   	     System.out.println("Please Enter Phone Number");
+   		 Thread.sleep(500);
+   		 driver.findElement(By.id("txtPhoneNumber")).sendKeys("");
+   		 driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		 System.out.println("Test for signUp is complete succuesfully");
+   		 
+	
+	}
+            //Password Eye button enable Check 
+	public void NegativeSignUp() throws Exception
+	{
+		Thread.sleep(5000);
+		//Its Allowing Permission for different things
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW' ]")).click();
+   // Allowing  FOr SignUp
+      
+   		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+   		Thread.sleep(2000);
+   		// Entering Information for Sign up
+   		
+   		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(2000);
+   		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(20000);
+   		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		System.out.println("You have 2 Minutes please verify your email");
+   		Thread.sleep(50000);
+   		driver.findElement(By.id("continueBtnTextView")).click();
+   		Thread.sleep(5000);
+   	     System.out.println("Please Enter Phone Number");
+   		 Thread.sleep(500);
+   		 driver.findElement(By.id("txtPhoneNumber")).sendKeys("");
+   		 driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		 System.out.println("Test for signUp is complete succuesfully");
+   		 
+	
+	}
+           
+	   // PAssword Disabale Button check
+	public void NegativeSignUp() throws Exception
+	{
+		Thread.sleep(5000);
+		//Its Allowing Permission for different things
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW' ]")).click();
+   // Allowing  FOr SignUp
+      
+   		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+   		Thread.sleep(2000);
+   		// Entering Information for Sign up
+   		
+   		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(2000);
+   		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(20000);
+   		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		System.out.println("You have 2 Minutes please verify your email");
+   		Thread.sleep(50000);
+   		driver.findElement(By.id("continueBtnTextView")).click();
+   		Thread.sleep(5000);
+   	     System.out.println("Please Enter Phone Number");
+   		 Thread.sleep(500);
+   		 driver.findElement(By.id("txtPhoneNumber")).sendKeys("");
+   		 driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		 System.out.println("Test for signUp is complete succuesfully");
+   		 
+	
+	}
+
+	    // Minnium password Length check
+	public void MinimiumPassLength() throws Exception
+	{
+		Thread.sleep(5000);
+		//Its Allowing Permission for different things
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW' ]")).click();
+   // Allowing  FOr SignUp
+      
+   		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+   		Thread.sleep(2000);
+   		// Entering Information for Sign up
+   		
+   		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(2000);
+   		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(20000);
+   		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		System.out.println("You have 2 Minutes please verify your email");
+   		Thread.sleep(50000);
+   		driver.findElement(By.id("continueBtnTextView")).click();
+   		Thread.sleep(5000);
+   	     System.out.println("Please Enter Phone Number");
+   		 Thread.sleep(500);
+   		 driver.findElement(By.id("txtPhoneNumber")).sendKeys("");
+   		 driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		 System.out.println("Test for signUp is complete succuesfully");
+   		 
+	
+	}
+
+	      //Maximum Password Length Check fucntion 
+	public void NegativeSignUp() throws Exception
+	{
+		Thread.sleep(5000);
+		//Its Allowing Permission for different things
+		
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW' ]")).click();
+   // Allowing  FOr SignUp
+      
+   		driver.findElement(By.xpath("//*[@text='Sign up']")).click();
+   		Thread.sleep(2000);
+   		// Entering Information for Sign up
+   		
+   		driver.findElement(By.id("com.weoto:id/txtName")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(2000);
+   		driver.findElement(By.id("com.weoto:id/txtEmail")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		Thread.sleep(20000);
+   		driver.findElement(By.id("com.weoto:id/txtPassword")).sendKeys("");
+   		driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		System.out.println("You have 2 Minutes please verify your email");
+   		Thread.sleep(50000);
+   		driver.findElement(By.id("continueBtnTextView")).click();
+   		Thread.sleep(5000);
+   	     System.out.println("Please Enter Phone Number");
+   		 Thread.sleep(500);
+   		 driver.findElement(By.id("txtPhoneNumber")).sendKeys("");
+   		 driver.findElement(By.xpath("//*[@resource-id='com.weoto:id/continueBtnTextView']")).click();
+   		 System.out.println("Test for signUp is complete succuesfully");
+   		 
+	
+	}
+           
+
+	
+	
+	
+
+	
+}

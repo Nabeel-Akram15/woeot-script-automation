@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--
+            Web Services Response Strings (WebServicesHelper)
+     -->
+  <!-- signup, sign-in, change mobile number -->
+  <string name="user_login_successfully">User login successfully.</string>
+  <string name="unable_to_authenticate">Unable to authenticate</string>
+  <string name="user_logout_successfully">User logout Successfully.</string>
+  <string name="email_not_verified">Email address Not Verified</string>
+  <string name="unautherized_error_msg">Your session has expired, please login again.</string>
+  <string name="email_address_not_exist">Email address not exist in record</string>
+  <string name="already_registered_email">Already register with this email</string>
+  <string name="email_registered_successfully">Email registered successfully.</string>
+  <string name="email_verified_successfully">Email address successfully verified.</string>
+  <string name="email_address_already_registered">You have already registered with this Email address.</string>
+  <string name="registered_successfully">Successfully registered</string>
+  <string name="you_dont_exist_in_records">You do not exist in our record anymore.</string>
+  <string name="invalid_user_device_token">Invalid user device token</string>
+  <string name="user_not_exists">User not exist</string>
+  <string name="organizer_not_exist">Organizer not exist</string>
+  <string name="invalid_password">Your password is invalid.</string>
+  <string name="password_updated_successfully">Password updated successfully.</string>
+  <!-- string value changed -->
+  <string name="password_successfully_updated">Password updated successfully.</string>
+  <!-- profile updated -->
+  <string name="image_uploaded_successfully">Image uploaded successfully.</string>
+  <string name="picture_uploaded_successfully">Picture uploaded successfully.</string>
+  <string name="friendly_name_updated_successfully">Friendly name successfully updated.</string>
+  <!-- phone number updated -->
+  <string name="phone_number_is_same">You have entered same number.</string>
+  <string name="you_have_entered_same_number">You have entered same number</string>
+  <string name="phone_number_already_associated_with_other_user">This phone number is already associated with another user</string>
+  <string name="phone_number_updated_text_message_sent">Phone Number is updated successfully. A text message is sent to the updated phone number.</string>
+  <string name="code_verified_successfully">Code is successfully verified</string>
+  <string name="you_have_entered_invalid_code">The code you entered is invalid</string>
+  <string name="phone_number_unlink_successfully">Phone number is successfully unlinked &amp; registered.</string>
+  <string name="your_code_is_expired_new_code_send_via_sms_or_email">The code has expired. New code has been sent via SMS or email.</string>
+  <!-- forgot password -->
+  <string name="email_sent_on_your_email_address">An email has been sent on your entered email address</string>
+  <!-- events updated -->
+  <string name="no_event_exists">No event exists.</string>
+  <string name="record_not_found">No record found.</string>
+  <string name="event_not_found">Event not found</string>
+  <string name="moment_not_exists">Moment not exist</string>
+  <string name="event_not_exists">Event not exist</string>
+  <string name="event_listed">Event has been listed.</string>
+  <string name="event_created_successfully">Event is created successfully.</string>
+  <string name="event_updated_successfully">Event is updated successfully.</string>
+  <string name="event_deleted_successfully">Event is deleted successfully.</string>
+  <string name="event_successfully_deleted">Event successfully deleted</string>
+  <string name="event_invite_sent_successfully">Invitation sent successfully.</string>
+  <string name="moment_added_successfully">Moment added successfully.</string>
+  <string name="moment_deleted_successfully">Moment deleted successfully.</string>
+  <string name="thank_you_for_feedback">Thank you for your feedback.</string>
+  <string name="thank_you_for_rate_us">Thank you for rating us.</string>
+  <!-- general error -->
+  <string name="general_error_msg">Sorry, your request cannot be processed.</string>
+  <string name="parameter_required">Input header parameter required</string>
+  <!-- not used -->
+  <string name="unable_to_connect">Unable to connect.</string>
+  <string name="invalid_url">Invaild URL.</string>
+  <string name="invalid_email_token">Email token is invalid</string>
+  <string name="email_address_verified_successfully">Successfully verified the email address.</string>
+  <string name="email_address_already_verified">Email address is already verified.</string>
+  <string name="image_absoulte_url">Image Absolute URL</string>
+  <string name="phone_number_updated_and_sms_code_sent">Phone number successfully updated against user &amp; SMS sent on entered number</string>
+  <string name="phone_number_already_registered">This phone number is already associated with another user.</string>
+  <string name="phone_number_verified_successfully">Phone number is verified successfully.</string>
+  <string name="username_updated_successfully">Name is updated successfully.</string>
+  <string name="already_registered_phone_number">This phone number is already registered.</string>
+  <string name="image_updated_successfully">Image updated successfully</string>
+  <string name="unable_to_get_image">Unable to get image</string>
+  <string name="password_not_matched">Password not matched</string>
+  <string name="your_code_is_expired_new_code_send_via_sms">Your code is expired. New code sent via SMS</string>
+  <string name="invalid_code_entered">Invalid or Expired Code</string>
+  <string name="text_internet_not_available">Internet may not be available. Please contact your service provider for more details!</string>
+  <!--
+            Others (Placeholders, alerts, labels, buttons texts)
+     -->
+  <string name="please_wait">Please Wait...</string>
+  <string name="processing">Processing</string>
+  <!-- string value changed -->
+  <string name="processing_msg">Processing, Please Wait... </string>
+  <string name="no">No</string>
+  <string name="yes">Yes</string>
+  <string name="ok">Ok</string>
+  <string name="feedback">Feedback</string>
+  <string name="feedback_caps">FEEDBACK</string>
+  <string name="close">Close</string>
+  <string name="password">Password</string>
+  <string name="thanks">thanks</string>
+  <string name="not_found">Not found</string>
+  <string name="keep">Keep</string>
+  <string name="lets_start">Let’s Start</string>
+  <string name="lets_go">Let’s go</string>
+  <string name="go_back">Go Back</string>
+  <string name="login">Login</string>
+  <string name="invite">Invite</string>
+  <string name="error">Error!</string>
+  <string name="delete_event">Delete Event</string>
+  <string name="read_more">More...</string>
+  <string name="read_less">Less...</string>
+  <string name="warning">Warning</string>
+  <string name="verify_email">Verify Email</string>
+  <string name="time">Time</string>
+  <string name="signup">Sign up</string>
+  <string name="skip">Skip</string>
+  <string name="submit">Submit</string>
+  <string name="send">Send</string>
+  <!-- string key changed -->
+  <string name="set">Set</string>
+  <string name="accept">Accept</string>
+  <string name="reject">Reject</string>
+  <string name="email_address">Email Address</string>
+  <string name="email">Email</string>
+  <string name="discard">Discard</string>
+  <string name="edit">Edit</string>
+  <string name="date">Date</string>
+  <string name="delete">Delete</string>
+  <!-- string key changed -->
+  <string name="continue_camelcased">Continue</string>
+  <string name="camera">Camera</string>
+  <string name="camera_caps">CAMERA</string>
+  <string name="cancel">Cancel</string>
+  <string name="view">View</string>
+  <!-- not used -->
+  <string name="success">success</string>
+  <string name="oops">Oops!</string>
+  <string name="username">Username</string>
+  <string name="description">Description</string>
+  <!--
+            User Login Screen
+     -->
+  <string name="input_password">Enter your password</string>
+  <string name="signup_to_login_now">Not Already Signed-Up? Signup Now</string>
+  <string name="password_forget_login">Oops! I forgot my password.</string>
+  <string name="signup_now">Signup Now</string>
+  <string name="user_login">User Login</string>
+  <!--
+            User Signup Step1 Screen
+     -->
+  <string name="already_signup_login">Already Signed-Up? Login Now</string>
+  <string name="full_name">Full Name</string>
+  <string name="name_1">Name</string>
+  <!-- string value changed -->
+  <string name="name">Name:</string>
+  <string name="login_now">Login Now</string>
+  <string name="whats_your_name">What\'s your name?</string>
+  <string name="what_should_we_call_you">What should we call you?</string>
+  <string name="whats_your_email_address">What\'s your email address?</string>
+  <!-- string value changed -->
+  <string name="what_is_your_email_address">What is your email address?</string>
+  <string name="choose_password">Create Password</string>
+  <string name="enter_a_password">Enter Password</string>
+  <string name="link_expired">This link has expired</string>
+  <string name="shall_we_send_new_link">Shall we send you another link?</string>
+  <string name="no_comma_thanks">No, thanks</string>
+  <string name="no_thanks">No thanks</string>
+  <string name="sure">sure</string>
+  <!--
+            User Signup Step4 Screen
+     -->
+  <string name="email_verification_sent">Email verification link has been sent to your email address. Please click to verify your email.</string>
+  <string name="user_signup">User Signup</string>
+  <string name="email_verification">Email Verification</string>
+  <!--
+            Resend Verification Code Screen
+     -->
+  <string name="resend_code">Resend Code</string>
+  <!-- string value changed -->
+  <string name="resend_verification_code">Resend Verification Code</string>
+  <!--
+            Ask Permissions + User Permissions Screen
+     -->
+  <string name="permissions">Permissions</string>
+  <string name="permission_req_screen_title">Permissions Required</string>
+  <string name="not_authorized">Not authorized</string>
+  <string name="authorized">Authorized</string>
+  <string name="restricted_access">Restricted Access</string>
+  <string name="access_denied_authorization_required_in_settings">Access Denied! Authorization is required from Device Settings</string>
+  <string name="push_notifications">Push Notifications</string>
+  <string name="allow">Allow</string>
+  <string name="contacts">Contacts</string>
+  <string name="picture_videos_permission">Pictures &amp; Videos</string>
+  <string name="permission_access_content_types">Weoto will need access permissions to the following....</string>
+  <string name="all_listed_permissions_must_be_granted">Before moving on to the next step, all listed permissions must be granted.</string>
+  <!--
+            User Permissions Alerts
+    -->
+  <string name="grant_contacts_permission_from_settings">Permission Not Granted, Please allow permission in Settings app for \"Contacts\"</string>
+  <string name="grant_push_notifications_permission_from_settings">Permission Not Granted, Please allow permission in Settings app for \"Push Notifications\"</string>
+  <string name="grant_photos_permission_from_settings">Permission Not Granted, Please allow permission in Settings app for \"Photos\"</string>
+  <string name="grant_camera_permission_from_settings">Permission Not Granted, Please allow permission in Settings app for \"Camera\"</string>
+  <!--
+            Side Menu Screen
+     -->
+  <string name="logout">Logout</string>
+  <string name="settings">Settings</string>
+  <!--
+            Confirm Capture/Camera Screen
+     -->
+  <string name="create_new_event">Tap + button to create a new event!</string>
+  <string name="upcoming_events">Upcoming Events</string>
+  <string name="no_saved_event">You have no saved events.</string>
+  <string name="no_upcoming_event">You have no upcoming events.</string>
+  <string name="saved_events">Saved Events</string>
+  <!-- not used -->
+  <string name="picture_taken">Picture taken</string>
+  <string name="upcoming_moments">Upcoming Moments</string>
+  <!--
+            CountryListViewController
+     -->
+  <string name="select_country">Select your Country</string>
+  <string name="choose_country_code">Choose Country Code</string>
+  <string name="search_here">Search here...</string>
+  <string name="search">Search</string>
+  <string name="search_name">Search Name</string>
+  <string name="search_name_elipses">Search Name..</string>
+  <!--
+            User Forgot Password Step2 Screen
+     -->
+  <string name="confirmation_code_send_on_email">A Confirmation Code has been sent to your email address.</string>
+  <string name="reset">Reset</string>
+  <string name="reset_password">Reset Password</string>
+  <string name="forgot_password">Forgot Password</string>
+  <!-- not used -->
+  <string name="confirmation_code_sent1">A confirmation code is sent to</string>
+  <string name="confirmation_code_sent2">your email address</string>
+  <string name="enter_confirmation_code_received_on_your_email_address_append_email">Enter Confirmation Code received on your email address (%s)</string>
+  <!--
+            UserForgotPasswordStep3ViewController
+     -->
+  <string name="input_confirm_password">Enter your password</string>
+  <string name="retype_password">Please retype to confirm your password</string>
+  <!--
+            Home Screen
+     -->
+  <string name="home_screen1_text">It\'s fun to be around your friends &amp; family </string>
+  <string name="home_screen2_text">Connect over like never before.</string>
+  <string name="home_screen3_text">Snap, share &amp; reimagine your moments!</string>
+  <!--
+            PrivacyPolicy Screen
+     -->
+  <string name="privacy_policy_camelcased">Privacy Policy</string>
+  <!-- not used -->
+  <string name="privacy_policy">Privacy Policy</string>
+  <!--
+            Terms and Conditions Screen
+     -->
+  <string name="login_terms_conditions_and_privacy_policy">By signing in, you agree to our\n %s &amp; %s.</string>
+  <string name="by_signing_up_you_agree_to_our_terms_and_privacy_policy">By signing up, you agree to our\n %s &amp; %s.</string>
+  <string name="terms_and_conditions">Terms &amp; Conditions</string>
+  <!--
+            User Dashboard Screen
+     -->
+  <string name="events">Events</string>
+  <string name="events_caps">EVENTS</string>
+  <string name="search_events">Search event</string>
+  <string name="view_event">View Event</string>
+  <string name="dashboard_title">Dashboard</string>
+  <string name="upcoming">Upcoming</string>
+  <string name="accept_invite">Accept Invite</string>
+  <string name="reject_invite">Reject Invite</string>
+  <string name="invite_accepted">Invite Accepted</string>
+  <string name="invite_rejected">Invite Rejected</string>
+  <!--
+            Organizer/Recipient Event Details Screen
+     -->
+  <string name="add_more">Add More</string>
+  <string name="delete_event_message">Are you sure you want to delete this event?</string>
+  <string name="delete_moment_message">Are you sure you want to delete this moment?</string>
+  <string name="accepted">Accepted</string>
+  <string name="joined">Joined</string>
+  <string name="pending">Pending</string>
+  <string name="rejected">Rejected</string>
+  <string name="view_all">View All</string>
+  <string name="waiting_for_recipients">Waiting for Recipients:</string>
+  <string name="moments">Moments</string>
+  <string name="pictures">Pictures</string>
+  <string name="moments_colon">Moments:</string>
+  <string name="pictures_colon">Pictures:</string>
+  <string name="event_happened">Event Happened:</string>
+  <string name="event_occurred">Event Occurred :</string>
+  <string name="event_starts">Event Starts:</string>
+  <string name="waiting_for_pictures">Waiting to receive pictures...</string>
+  <!-- not used -->
+  <string name="pending_pictures">Pending Pictures:</string>
+  <string name="no_pictures_yet">No Pictures Yet</string>
+  <!--
+            EventCountDownPrompt
+     -->
+  <string name="event_will_start_at">Your event is starting in:</string>
+  <!-- not used -->
+  <string name="event_will_start">Event will start in 1 minute.</string>
+  <!--
+            PullToRefresh loader text
+     -->
+  <string name="refresh_event_details">Refreshing Event Details</string>
+  <string name="refresh_event_list">Refreshing Events List</string>
+  <!--
+            Event Setup Step1 Screen
+     -->
+  <string name="setup_new_event">Set up a New Event</string>
+  <string name="whats_the_event_called">What\'s the event called?</string>
+  <string name="what_is_the_event_called">What\'s the event called?</string>
+  <string name="event_name">Name this event</string>
+  <string name="input_event_title_here">Event title here.</string>
+  <string name="invalid_date">Invalid Date</string>
+  <string name="selected_past_date_for_event_message">You cannot select a date for an event in the past</string>
+  <!-- not used -->
+  <string name="event_missed">Oops! Event Missed.</string>
+  <string name="event_missed_txt">Event Title Missed</string>
+  <string name="user_event_setup">User Event Setup</string>
+  <string name="please_enter_your_event_description">Please enter your Event Description</string>
+  <!--
+            Event Setup Step2 Screen
+     -->
+  <string name="take_picture">Take Picture</string>
+  <string name="upload_picture_from_device">Upload from your device.</string>
+  <string name="input_event_description">Describe your event here.</string>
+  <!--
+            Event Setup Step3 Screen
+     -->
+  <string name="unnamed">Unnamed</string>
+  <string name="disallow_invite_to_organizer">You cannot send invite to your own registered email or phone number</string>
+  <string name="invalid_start_date">Invalid Start Date</string>
+  <string name="invite_friends">Invite Friends</string>
+  <string name="no_email_phone_found">No Email/Phone found</string>
+  <string name="select_greater_current_date_time">Please select the \"Start Date &amp; Time of Event\" that must be greater than the current date &amp; time</string>
+  <string name="contacts_selected">Contacts Selected</string>
+  <string name="invite_more_txt">Invite More</string>
+  <!--
+            User Feedback Screen
+     -->
+  <string name="attach_logs">Attach logs</string>
+  <string name="enter_email_feedback">Enter your email address so that we can get back to you.</string>
+  <string name="feedback_email">Email Address</string>
+  <string name="hi_there_send_us_a_message">Hi there! Please drop us a line here</string>
+  <string name="leave_message_here">Leave message here(optional)</string>
+  <!--
+            User Phone Number Verification
+     -->
+  <string name="country_code_not_provided">Country Code is not provided.</string>
+  <string name="input_confirmation_code">Enter Confirmation Code</string>
+  <string name="enter_confirmation_code">Enter Confirmation Code</string>
+  <string name="phone_number_verification">Phone Number Verification</string>
+  <string name="input_your_mobile_number">Please enter your phone number.</string>
+  <string name="user_phone_number">Your Phone Number</string>
+  <string name="number">Number</string>
+  <string name="confirmation_code_1">Confirmation code</string>
+  <string name="confirmation_code">Confirmation Code.</string>
+  <!--
+            Change Password Screen
+     -->
+  <string name="change_password">Change Password</string>
+  <string name="current_password">Current Password</string>
+  <string name="input_old_password">Enter your old password</string>
+  <string name="new_password">New Password</string>
+  <!--
+            Edit Profile
+     -->
+  <string name="friendly_name">Friendly Name</string>
+  <string name="phone_number_1">Phone Number</string>
+  <!-- string key changed -->
+  <string name="phone_number">Phone Number:</string>
+  <string name="capture">Capture</string>
+  <string name="upload">Upload</string>
+  <string name="edit_profile_title">Edit Profile</string>
+  <string name="update_friendly_name">Update your Name</string>
+  <!--
+            User Ratings Screen
+     -->
+  <string name="user_rate_us_heading">Hi! How would you rate us?</string>
+  <string name="user_rate_us">Would you like to rate our app?</string>
+  <string name="rate_on_app_store">Please rate us on Apps Store</string>
+  <string name="rate">Rate</string>
+  <string name="rate_weoto">Rate Weoto</string>
+  <string name="rate_us_screen_title">RATE</string>
+  <!--
+            Navigation Bar (For Title of Screens)
+     -->
+  <string name="back">Back</string>
+  <!--
+            User Help Overlay Mask Screens
+     -->
+  <string name="pending_event_help_to_accept_reject">Users can view all pending events at the top of the page\n Tap to Accept or Reject</string>
+  <string name="plus_button_to_create_new_event">To create a new event, click the + button above.</string>
+  <string name="participated_saved_event">Attended Events</string>
+  <string name="pending_event_yellow_star_notification">Latest Updates or Notifications</string>
+  <!--
+            Validations - Input Messages (Input Prompt)
+     -->
+  <string name="input_email_address_validation_heading">Enter your email address</string>
+  <string name="input_email_password_validation_heading">Enter your Email &amp; Password</string>
+  <string name="enter_your_email_and_password">Enter your Email &amp; Password.</string>
+  <string name="input_new_password_validation_heading">Enter your new password</string>
+  <string name="current_password_new_password_same_validation">Enter a new password which differs from current password.</string>
+  <string name="input_feedback_validation">Enter your feedback here</string>
+  <!--
+            Image Slideshow (Event Details)
+     -->
+  <string name="event_details">Event Details</string>
+  <string name="hidden">Hidden</string>
+  <string name="visible">Visible</string>
+  <string name="hidden_caps">HIDDEN</string>
+  <string name="visible_caps">VISIBLE</string>
+  <!--
+            Form Validation (Sign Up)
+     -->
+  <string name="input_same_password">Passwords didn’t match. Try again.</string>
+  <string name="input_valid_phone_number">Please enter a valid phone number</string>
+  <string name="input_valid_email_address">Please enter a valid email address.</string>
+  <string name="input_valid_name">Please enter a valid name.</string>
+  <string name="enter_password">Please enter password</string>
+  <string name="input_verification_code_email">Please enter a verification code that was just sent to your email address.</string>
+  <string name="input_verification_code_phone">Please enter the verification code sent on your phone number</string>
+  <string name="input_current_password">Please enter your current password.</string>
+  <string name="input_event_title">Please enter your Event Title</string>
+  <string name="input_feedback">Please enter your Feedback</string>
+  <string name="input_full_name">Please enter your full name.</string>
+  <string name="input_new_password">Please enter your new password.</string>
+  <string name="confirm_your_password">Confirm your Password</string>
+  <string name="enter_your_new_password">Enter your new Password</string>
+  <string name="input_password_length_6">Please enter a password with minimum of 6 characters length.</string>
+  <string name="input_password_length">Please enter a password with minimum of %1$d characters length.</string>
+  <string name="input_your_password">Enter your password.</string>
+  <string name="input_phone_number">Please enter your phone number.</string>
+  <string name="input_password_retype">Retype your password to confirm</string>
+  <string name="select_atleast_one_contact">Please select at least one contact from the contacts list.</string>
+  <string name="select_event_start_date">Please select the Event Start Date.</string>
+  <string name="select_event_start_time">Please select the Event Start Time.</string>
+  <string name="input_full_name_length">Please enter full name that contains 30 characters maximum.</string>
+  <string name="please_enter_your_current_password_with_minimum_of_n_characters_length">Please enter your current password with minimum of %i characters length</string>
+  <string name="please_enter_your_new_password_with_minimum_of_n_characters_length">Please enter your new password with minimum of %i characters length</string>
+  <!--
+            Phone Verification
+     -->
+  <string name="phone_number_invalid_title">Invalid Phone Number.</string>
+  <string name="phone_number_invalid_msg">Your phone number is invalid! Please provide a valid contact detail.</string>
+  <string name="edit_contact_camelcased">Edit Contact</string>
+  <string name="edit_contact">Edit your phone number.</string>
+  <!--
+            Event Type Selection
+     -->
+  <string name="select_event_type">Select Event Type:</string>
+  <string name="select">Select</string>
+  <string name="select_weoto">Select Weoto</string>
+  <string name="or">or</string>
+  <string name="moment">Moment</string>
+  <string name="party">Party</string>
+  <string name="title_event_type">Event Type</string>
+  <!--
+            Party Setup Step1 Screen
+     -->
+  <!-- string value changed -->
+  <string name="setup_new_weoto_party">Set up a New Weoto Party</string>
+  <string name="setup_a_weoto_party">Set up a Weoto Party</string>
+  <!-- Add More Moment Cell -->
+  <string name="add_more_moment">New Moment</string>
+  <!--
+            Party Recipients Screen
+     -->
+  <string name="participants">Participants</string>
+  <!--
+            Add Party Moment Screen
+     -->
+  <string name="setup_weoto_moment">Set up a Weoto Moment</string>
+  <string name="moment_date_greater_than_party_date">Moment date &amp; time must be greater than party\'s date &amp; time.</string>
+
+    <!--
+            Confirm Capture Screen
+     -->
+  <string name="discard_moment_upload_message">Are you sure you want to discard the uploaded picture for this moment?</string>
+  <!--
+            Push Notifications (PopUp Alert)
+     -->
+  <string name="event_updated">You event has been updated successfully.</string>
+  <string name="event_is_updated_successfully">Event is updated successfully.</string>
+  <string name="event_deleted">Event is deleted successfully.</string>
+  <string name="new_image_uploaded">A new Image is uploaded for the event.</string>
+  <string name="created_by">Created by:</string>
+  <string name="tap_to_see_details">Tap to see details.</string>
+  <string name="enable_push_notifications_from_settings">Please enable push notifications from app settings for this app to work properly</string>
+  <string name="push_notifications_disabled">Push notifications are disabled</string>
+  <!-- not used -->
+  <string name="event_invite_received">You have received an event invitation.</string>
+  <string name="session_expired">Your session has expired.</string>
+  <!--
+            Push Notifications (PushPopUp Screen)
+    -->
+  <string name="new_invitation">New Invitation</string>
+  <string name="updated_by">Updated by:</string>
+  <string name="uploaded_by">Uploaded by:</string>
+  <string name="deleted_by">Deleted by:</string>
+  <string name="login_session_expire">Your login session has expired.</string>
+  <string name="user_session_expire">User session has expired</string>
+  <string name="login_session_expire_login_on_another_device">Your login session has expired because you have logged-in on another device</string>
+  <!--
+            Push Notification (LocalPopUp Screen)
+     -->
+  <string name="manage_event">Manage Event</string>
+  <!--
+            Android Firebase Analytics
+     -->
+  <string name="home_screen">Home Screen</string>
+  <string name="signup_btn">:onClickSignup</string>
+  <string name="login_btn">:onClickLogin</string>
+  <string name="signup_name_screen">Signup Screen:FullName</string>
+  <string name="signup_email_screen">Signup Screen:Email</string>
+  <string name="signup_password_screen">Signup Screen:Password</string>
+  <string name="signup_email_verify_screen">Signup Screen:EmailVerify</string>
+  <string name="signup_ph_no_screen">Signup Screen:PhoneNumber</string>
+  <string name="signup_ph_code_screen">Signup Screen:PhoneCode</string>
+  <string name="login_screen">Login Screen</string>
+  <string name="continue_btn">onClickContinue</string>
+  <string name="forget_btn">:onClickForget</string>
+  <string name="reset_emil_screen">Reset Screen:Email</string>
+  <string name="reset_password_screen">Reset Screen:Password</string>
+  <string name="reset_password_confirmation_screen">Reset Screen:Confirmation</string>
+  <string name="dashboard_screen">Dashboard Screen</string>
+  <string name="plus_btn">:onClickCreateEvent</string>
+  <string name="event_title_screen">Event Title Screen:</string>
+  <string name="event_setup_screen">Event Setup Screen:</string>
+  <string name="address_book_screen">Addressbook Screen:</string>
+  <string name="invite_btn">:onClickInvite</string>
+  <string name="event_selection_screen">Event Selection Screen</string>
+  <string name="event_selection__btn">:onClick</string>
+  <string name="party_organiser_detail_screen">Party Organiser Detail Screen</string>
+  <string name="party_recipient_detail_screen">Party Recipient Detail Screen</string>
+  <string name="organiser_detail_screen">Moment Organiser Detail Screen</string>
+  <string name="recipient_detail_screen">Moment Recipient Detail Screen</string>
+  <string name="edit_profile_screen">Edit Profile Screen</string>
+  <string name="feedback_screen">Feedback Screen</string>
+  <string name="rating_bar_screen">Rating Bar Screen</string>
+  <string name="privacy_policies_screen">Privacy Policies Screen</string>
+  <!--
+            Android (Extra Strings)
+     -->
+  <string name="app_name">Weoto</string>
+  <string name="at">\@</string>
+  <string name="picture_upload_format">Please upload your files in JPG / JPEG formats only.</string>
+  <string name="input_email_address_validation">Please enter your valid email address.</string>
+  <string name="only_for_one_event_create">You can create only one event at a time.</string>
+  <string name="update_password">Update your password</string>
+  <string name="update_phone_number">Update your phone number</string>
+  <string name="_for">For</string>
+  <string name="on">on</string>
+  <string name="event_expired_txt">Event has expired.</string>
+  <string name="try_again_txt">Try Again</string>
+  <string name="contact_loading_msg">Contacts Loading...</string>
+  <string name="camera_view_permission_access">This app demonstrates the usage of CameraView. Allow app to access your device camera.</string>
+  <string name="happy_with_picture">Does this picture make you happy?</string>
+  <string name="at_the_rate_sign_with_spaces"> \@ </string>
+  <string-array name="CountryList">
+    <item>93,af,Afghanistan</item>
+    <item>355,al,Albania</item>
+    <item>213,dz,Algeria</item>
+    <item>376,ad,Andorra</item>
+    <item>244,ao,Angola</item>
+    <item>1264,ai,Anguilla</item>
+    <item>672,aq,Antarctica</item>
+    <item>1268,ag,Antigua and Barbuda</item>
+    <item>54,ar,Argentina</item>
+    <item>374,am,Armenia</item>
+    <item>297,aw,Aruba</item>
+    <item>61,au,Australia</item>
+    <item>43,at,Austria</item>
+    <item>994,az,Azerbaijan</item>
+    <item>1242,bs,Bahamas</item>
+    <item>973,bh,Bahrain</item>
+    <item>880,bd,Bangladesh</item>
+    <item>1246,bb,Barbados</item>
+    <item>375,by,Belarus</item>
+    <item>32,be,Belgium</item>
+    <item>501,bz,Belize</item>
+    <item>229,bj,Benin</item>
+    <item>1441,bm,Bermuda</item>
+    <item>975,bt,Bhutan</item>
+    <item>591,bo,Bolivia, Plurinational State Of</item>
+    <item>387,ba,Bosnia And Herzegovina</item>
+    <item>267,bw,Botswana</item>
+    <item>55,br,Brazil</item>
+    <item>1284,vg,British Virgin Islands</item>
+    <item>673,bn,Brunei Darussalam</item>
+    <item>359,bg,Bulgaria</item>
+    <item>226,bf,Burkina Faso</item>
+    <item>95,mm,Myanmar</item>
+    <item>257,bi,Burundi</item>
+    <item>855,kh,Cambodia</item>
+    <item>237,cm,Cameroon</item>
+    <item>1,ca,Canada</item>
+    <item>238,cv,Cape Verde</item>
+    <item>1345,ky,Cayman Islands</item>
+    <item>236,cf,Central African Republic</item>
+    <item>235,td,Chad</item>
+    <item>56,cl,Chile</item>
+    <item>86,cn,China</item>
+    <item>61,cx,Christmas Island</item>
+    <item>61,cc,Cocos (keeling) Islands</item>
+    <item>57,co,Colombia</item>
+    <item>269,km,Comoros</item>
+    <item>242,cg,Congo</item>
+    <item>243,cd,Congo, The Democratic Republic Of The</item>
+    <item>682,ck,Cook Islands</item>
+    <item>506,cr,Costa Rica</item>
+    <item>385,hr,Croatia</item>
+    <item>53,cu,Cuba</item>
+    <item>357,cy,Cyprus</item>
+    <item>420,cz,Czech Republic</item>
+    <item>45,dk,Denmark</item>
+    <item>253,dj,Djibouti</item>
+    <item>1767,dm,Dominica</item>
+    <item>1849,do,Dominican Republic</item>
+    <item>670,tl,Timor-leste</item>
+    <item>593,ec,Ecuador</item>
+    <item>20,eg,Egypt</item>
+    <item>503,sv,El Salvador</item>
+    <item>240,gq,Equatorial Guinea</item>
+    <item>291,er,Eritrea</item>
+    <item>372,ee,Estonia</item>
+    <item>251,et,Ethiopia</item>
+    <item>500,fk,Falkland Islands (malvinas)</item>
+    <item>298,fo,Faroe Islands</item>
+    <item>679,fj,Fiji</item>
+    <item>358,fi,Finland</item>
+    <item>33,fr,France</item>
+    <item>594,gf,French Guyana</item>
+    <item>689,pf,French Polynesia</item>
+    <item>241,ga,Gabon</item>
+    <item>220,gm,Gambia</item>
+    <item>995,ge,Georgia</item>
+    <item>49,de,Germany</item>
+    <item>233,gh,Ghana</item>
+    <item>350,gi,Gibraltar</item>
+    <item>30,gr,Greece</item>
+    <item>299,gl,Greenland</item>
+    <item>1473,gd,Grenada</item>
+    <item>502,gt,Guatemala</item>
+    <item>224,gn,Guinea</item>
+    <item>245,gw,Guinea-bissau</item>
+    <item>592,gy,Guyana</item>
+    <item>509,ht,Haiti</item>
+    <item>504,hn,Honduras</item>
+    <item>852,hk,Hong Kong</item>
+    <item>36,hu,Hungary</item>
+    <item>91,in,India</item>
+    <item>62,id,Indonesia</item>
+    <item>98,ir,Iran, Islamic Republic Of</item>
+    <item>964,iq,Iraq</item>
+    <item>353,ie,Ireland</item>
+    <item>44,im,Isle Of Man</item>
+    <item>972,il,Israel</item>
+    <item>39,it,Italy</item>
+    <item>225,ci,Côte D\'ivoire</item>
+    <item>1876,jm,Jamaica</item>
+    <item>81,jp,Japan</item>
+    <item>962,jo,Jordan</item>
+    <item>7,kz,Kazakhstan</item>
+    <item>254,ke,Kenya</item>
+    <item>686,ki,Kiribati</item>
+    <item>965,kw,Kuwait</item>
+    <item>996,kg,Kyrgyzstan</item>
+    <item>856,la,Lao People\'s Democratic Republic</item>
+    <item>371,lv,Latvia</item>
+    <item>961,lb,Lebanon</item>
+    <item>266,ls,Lesotho</item>
+    <item>231,lr,Liberia</item>
+    <item>218,ly,Libya</item>
+    <item>423,li,Liechtenstein</item>
+    <item>370,lt,Lithuania</item>
+    <item>352,lu,Luxembourg</item>
+    <item>853,mo,Macao</item>
+    <item>389,mk,Macedonia, The Former Yugoslav Republic Of</item>
+    <item>261,mg,Madagascar</item>
+    <item>265,mw,Malawi</item>
+    <item>60,my,Malaysia</item>
+    <item>960,mv,Maldives</item>
+    <item>223,ml,Mali</item>
+    <item>356,mt,Malta</item>
+    <item>692,mh,Marshall Islands</item>
+    <item>596,mq,Martinique</item>
+    <item>222,mr,Mauritania</item>
+    <item>230,mu,Mauritius</item>
+    <item>262,yt,Mayotte</item>
+    <item>52,mx,Mexico</item>
+    <item>691,fm,Micronesia, Federated States Of</item>
+    <item>373,md,Moldova, Republic Of</item>
+    <item>377,mc,Monaco</item>
+    <item>976,mn,Mongolia</item>
+    <item>1664,ms,Montserrat</item>
+    <item>382,me,Montenegro</item>
+    <item>212,ma,Morocco</item>
+    <item>258,mz,Mozambique</item>
+    <item>264,na,Namibia</item>
+    <item>674,nr,Nauru</item>
+    <item>977,np,Nepal</item>
+    <item>31,nl,Netherlands</item>
+    <item>687,nc,New Caledonia</item>
+    <item>64,nz,New Zealand</item>
+    <item>505,ni,Nicaragua</item>
+    <item>227,ne,Niger</item>
+    <item>234,ng,Nigeria</item>
+    <item>683,nu,Niue</item>
+    <item>850,kp,North Korea</item>
+    <item>47,no,Norway</item>
+    <item>968,om,Oman</item>
+    <item>92,pk,Pakistan</item>
+    <item>680,pw,Palau</item>
+    <item>507,pa,Panama</item>
+    <item>675,pg,Papua New Guinea</item>
+    <item>595,py,Paraguay</item>
+    <item>51,pe,Peru</item>
+    <item>63,ph,Philippines</item>
+    <item>870,pn,Pitcairn</item>
+    <item>48,pl,Poland</item>
+    <item>351,pt,Portugal</item>
+    <item>1939,pr,Puerto Rico</item>
+    <item>974,qa,Qatar</item>
+    <item>262,re,Réunion</item>
+    <item>40,ro,Romania</item>
+    <item>7,ru,Russian Federation</item>
+    <item>250,rw,Rwanda</item>
+    <item>590,bl,Saint Barthélemy</item>
+    <item>1869,kn,Saint Kitts and Nevis</item>
+    <item>1758,lc,Saint Lucia</item>
+    <item>1784,vc,Saint Vincent &amp; The Grenadines</item>
+    <item>685,ws,Samoa</item>
+    <item>378,sm,San Marino</item>
+    <item>239,st,Sao Tome And Principe</item>
+    <item>966,sa,Saudi Arabia</item>
+    <item>221,sn,Senegal</item>
+    <item>381,rs,Serbia</item>
+    <item>248,sc,Seychelles</item>
+    <item>232,sl,Sierra Leone</item>
+    <item>65,sg,Singapore</item>
+    <item>1721,sx,Sint Maarten</item>
+    <item>421,sk,Slovakia</item>
+    <item>386,si,Slovenia</item>
+    <item>677,sb,Solomon Islands</item>
+    <item>252,so,Somalia</item>
+    <item>27,za,South Africa</item>
+    <item>82,kr,South Korea</item>
+    <item>34,es,Spain</item>
+    <item>94,lk,Sri Lanka</item>
+    <item>290,sh,Saint Helena, Ascension And Tristan Da Cunha</item>
+    <item>508,pm,Saint Pierre And Miquelon</item>
+    <item>249,sd,Sudan</item>
+    <item>597,sr,Suriname</item>
+    <item>268,sz,Swaziland</item>
+    <item>46,se,Sweden</item>
+    <item>41,ch,Switzerland</item>
+    <item>963,sy,Syrian Arab Republic</item>
+    <item>886,tw,Taiwan, Province Of China</item>
+    <item>992,tj,Tajikistan</item>
+    <item>255,tz,Tanzania, United Republic Of</item>
+    <item>66,th,Thailand</item>
+    <item>228,tg,Togo</item>
+    <item>690,tk,Tokelau</item>
+    <item>676,to,Tonga</item>
+    <item>1868,tt,Trinidad &amp; Tobago</item>
+    <item>216,tn,Tunisia</item>
+    <item>90,tr,Turkey</item>
+    <item>993,tm,Turkmenistan</item>
+    <item>1649,tc,Turks and Caicos Islands</item>
+    <item>688,tv,Tuvalu</item>
+    <item>971,ae,United Arab Emirates</item>
+    <item>256,ug,Uganda</item>
+    <item>44,gb,United Kingdom</item>
+    <item>380,ua,Ukraine</item>
+    <item>598,uy,Uruguay</item>
+    <item>1,us,United States</item>
+    <item>1340,vi,US Virgin Islands</item>
+    <item>998,uz,Uzbekistan</item>
+    <item>678,vu,Vanuatu</item>
+    <item>39,va,Holy See (Vatican City State)</item>
+    <item>58,ve,Venezuela, Bolivarian Republic Of</item>
+    <item>84,vn,Viet Nam</item>
+    <item>681,wf,Wallis And Futuna</item>
+    <item>967,ye,Yemen</item>
+    <item>260,zm,Zambia</item>
+    <item>263,zw,Zimbabwe</item>
+  </string-array>
+</resources>

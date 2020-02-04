@@ -1,0 +1,22 @@
+package Practice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Aomata_SignUp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver= new FirefoxDriver();
+		String baseURl= "https://www.smartioapp.com/free-signup.html";
+		WebElement firstname =driver.findElement(By.id("f_s_firstname"));
+		firstname.sendKeys("Nabeel");
+		
+		
+		
+
+	}
+
+}

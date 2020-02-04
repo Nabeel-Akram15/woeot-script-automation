@@ -1,0 +1,25 @@
+package tests;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+public class Tests extends BaseClass {
+    
+	@Test
+	public void signup() {
+		
+		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);		
+		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		
+		System.out.println("Test for SignUp Permission is Done");
+	}
+}

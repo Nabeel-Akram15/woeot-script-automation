@@ -1,0 +1,22 @@
+package tests;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+
+public class Tests extends BaseClass {
+    
+	public void signup() {
+		
+		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);		
+		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		
+	}
+}
