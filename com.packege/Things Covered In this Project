@@ -3,7 +3,8 @@ Page Object Model
 TestNg
 Maven
 Data Provider (Data Driven Testing) 
-Selenium 
+Selenium WebDriver , MobileDriver , AndroidDriver
 Java
 DB Testing ( Send query and check response with the front_end )
-
+XML Data Retrieval for the testing of Localization ( Having string file for the traversal) 
+Configuration ( for working without cable e.g wifi) 
